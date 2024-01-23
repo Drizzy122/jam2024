@@ -10,42 +10,35 @@ public class CorrectLetter : MonoBehaviour
     public TextMeshPro myLetter;
     public Transform Player;
     private Transform RockH;
+    public bool isgrabable;
+    //public GrabCloseRock grab;
 
     // Start is called before the first frame update
     void Start()
     {
        // Player = GameObject.FindWithTag("Player");
         RockH = gameObject.GetComponent<Transform>();
+        //grab = gameObject.GetComponent<GrabCloseRock>();
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(myKey))
+        if (Input.GetKeyDown(myKey) & isgrabable)
         {
             Debug.Log(myKey.ToString());
             Player.position = RockH.position;
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        isgrabable = true;
+    }
 
-        public void AssignLetter(KeyCode LetterToAssign)
+    public void AssignLetter(KeyCode LetterToAssign)
     {
         myKey = LetterToAssign;
         myLetter.text = myKey.ToString();
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        
-        Transform where = other.transform;
-        if (Input.GetKeyDown(myKey))
-        {
-            Debug.Log(myKey.ToString());
-            gameObject.transform.position = where.position;
-        }
-
-
-
-
-
     }
 }
