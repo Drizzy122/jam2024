@@ -8,11 +8,13 @@ public class AttemptAtClimb : MonoBehaviour
     public List<KeyCode> ClimbingOutputs;
     public int NumberOfClimbingOutputs;
     public CorrectLetter[] ClimbingLetters;
+    public GameObject rockPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
         RandomiseClimbingPoints(NumberOfClimbingOutputs);
+        Times(NumberOfClimbingOutputs);
         ClimbingLetters = GameObject.FindObjectsOfType<CorrectLetter>();
         AssignLetters();
     }
@@ -33,4 +35,20 @@ public class AttemptAtClimb : MonoBehaviour
             ClimbingLetters[i].AssignLetter(ClimbingOutputs[i]);
         }
     }
+    public void Times(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            Spawn();
+        }
+        //AssignLetters();
+    }
+    public void Spawn()
+    {
+        
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-9, 10), (Random.Range(0, 20)), 5);
+            Instantiate(rockPrefab, randomSpawnPosition, Quaternion.identity);
+        
+    }
+   
 }

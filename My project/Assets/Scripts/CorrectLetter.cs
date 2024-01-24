@@ -6,19 +6,20 @@ using UnityEngine;
 public class CorrectLetter : MonoBehaviour
 {
     public KeyCode myKey;
-    //public TextMesh myLetter;
     public TextMeshPro myLetter;
     public Transform Player;
     private Transform RockH;
     public bool isgrabable;
-    //public GrabCloseRock grab;
+    private GameObject playa;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-       // Player = GameObject.FindWithTag("Player");
+        playa = GameObject.FindGameObjectWithTag("Player");
+        Player = playa.GetComponent<Transform>();
         RockH = gameObject.GetComponent<Transform>();
-        //grab = gameObject.GetComponent<GrabCloseRock>();
+        
     }
     
 
