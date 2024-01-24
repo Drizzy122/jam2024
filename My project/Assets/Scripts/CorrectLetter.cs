@@ -36,6 +36,10 @@ public class CorrectLetter : MonoBehaviour
     {
         isgrabable = true;
     }
+    private void OnTriggerExit(Collider other)
+    {
+        isgrabable = false;
+    }
 
     public void AssignLetter(KeyCode LetterToAssign)
     {
