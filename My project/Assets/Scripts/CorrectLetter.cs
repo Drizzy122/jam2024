@@ -26,13 +26,23 @@ public class CorrectLetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Player)
+        {
+            float dist = Vector3.Distance(Player.position, RockH.position);
+            if (dist < 0.2f)
+            {
+                isgrabable = false;
+            }
+        }
         if (Input.GetKeyDown(myKey) & isgrabable)
         {
             Debug.Log(myKey.ToString());
             Player.position = RockH.position;
+            
+
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         isgrabable = true;
     }
