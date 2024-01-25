@@ -34,6 +34,7 @@ public class AttemptAtClimb : MonoBehaviour
         {
             ClimbingLetters[i].AssignLetter(ClimbingOutputs[i]);
         }
+
     }
     public void Times(int count)
     {
