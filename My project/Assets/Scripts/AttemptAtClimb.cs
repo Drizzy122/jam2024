@@ -46,7 +46,7 @@ public class AttemptAtClimb : MonoBehaviour
     public void Spawn()
     {
         
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-9, 10), (Random.Range(0, 20)), 5);
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 25), (Random.Range(0, 70)), 5);
             Instantiate(rockPrefab, randomSpawnPosition, Quaternion.identity);
         
     }

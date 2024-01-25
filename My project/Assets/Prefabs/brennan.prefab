@@ -196,7 +196,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1 &689466067747187143
 GameObject:
@@ -479,7 +479,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &249814627592234692
 HingeJoint:
@@ -831,7 +831,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &96629952393572990
 HingeJoint:
@@ -1155,7 +1155,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &7561657906632460216
 HingeJoint:
@@ -1328,7 +1328,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &1624320208795529016
 HingeJoint:
@@ -1712,7 +1712,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &4122612127009356433
 HingeJoint:
@@ -1967,7 +1967,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1 &3655869246142583726
 GameObject:
@@ -2104,7 +2104,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &5665409556814888288
 HingeJoint:
@@ -2277,7 +2277,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &7993554154941010630
 HingeJoint:
@@ -2716,7 +2716,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &4974254191003842848
 HingeJoint:
@@ -2890,7 +2890,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1 &7039858128106026436
 GameObject:
@@ -3260,7 +3260,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1 &9000317864768110530
 GameObject:
@@ -3397,7 +3397,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 2
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!59 &7339966711969585349
 HingeJoint:

@@ -36,6 +36,7 @@ public class CorrectLetter : MonoBehaviour
         }
         if (Input.GetKeyDown(myKey) & isgrabable)
         {
+
             Debug.Log(myKey.ToString());
             Player.position = RockH.position;
             
