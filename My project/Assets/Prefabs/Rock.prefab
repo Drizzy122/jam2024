@@ -53,6 +53,8 @@ MonoBehaviour:
   myLetter: {fileID: 1273055320374820205}
   Player: {fileID: 0}
   isgrabable: 0
+  data: {fileID: 0}
+  WaitRock: 7
 --- !u!135 &7720089912958663659
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -120,7 +122,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0

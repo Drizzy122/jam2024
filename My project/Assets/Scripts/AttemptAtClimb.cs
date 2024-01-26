@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AttemptAtClimb : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class AttemptAtClimb : MonoBehaviour
     void Start()
     {
         RandomiseClimbingPoints(NumberOfClimbingOutputs);
+
         Times(NumberOfClimbingOutputs);
         ClimbingLetters = GameObject.FindObjectsOfType<CorrectLetter>();
         AssignLetters();
@@ -51,5 +53,13 @@ public class AttemptAtClimb : MonoBehaviour
             Instantiate(rockPrefab, randomSpawnPosition, Quaternion.identity);
         
     }
-   
+
+    public void ReAssighn()
+    {
+
+        for (int i = 0; i < ClimbingLetters.Length; i++, i++)
+        {
+            ClimbingLetters[i].AssignLetter(ClimbingOutputs[i]);
+        }
+    }
 }

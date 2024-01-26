@@ -14,6 +14,7 @@ public class CorrectLetter : MonoBehaviour
     private GameObject playa;
     private Collider rocksIn;
     public AttemptAtClimb data;
+    public float WaitRock;
 
 
     // Start is called before the first frame update
@@ -37,6 +38,9 @@ public class CorrectLetter : MonoBehaviour
             if (dist < 0.2f)
             {
                 isgrabable = false;
+                StartCoroutine(Rockfall());
+                // Make a Fail cehck code in here // collider or some shit could do
+
             }
         }
         if (Input.GetKeyDown(myKey) & isgrabable)
@@ -44,11 +48,17 @@ public class CorrectLetter : MonoBehaviour
 
             Debug.Log(myKey.ToString());
             Player.position = RockH.position;
-            
+
 
         }
-     
+
     }
+    IEnumerator Rockfall()
+    {
+        yield return new WaitForSeconds(WaitRock);
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    }
+
     public void AssignTags()
     {
         if (myKey == KeyCode.W)
@@ -76,7 +86,7 @@ public class CorrectLetter : MonoBehaviour
         {
             Debug.Log($"is sees the same tag");
 
-            ReAssighn();
+            data.ReAssighn();
         }
 
     }
@@ -90,10 +100,5 @@ public class CorrectLetter : MonoBehaviour
         myKey = LetterToAssign;
         myLetter.text = myKey.ToString();
     }
-    public void ReAssighn()
-    {
-       
-        myKey = data.ClimbingInputs[Random.Range(0, 4)];
-        myLetter.text = myKey.ToString();
-    }
+    
 }
