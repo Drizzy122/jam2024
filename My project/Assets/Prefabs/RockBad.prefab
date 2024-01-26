@@ -9,12 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8989998672973134553}
-  - component: {fileID: 3413913326388895687}
+  - component: {fileID: 7720089912958663659}
   - component: {fileID: 860164261121335320}
   - component: {fileID: 8212916174254695195}
-  - component: {fileID: 4198217684695601236}
   m_Layer: 0
-  m_Name: Rock
+  m_Name: RockBad
   m_TagString: Empty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,26 +36,27 @@ Transform:
   - {fileID: 2669070576928728571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 45}
---- !u!114 &3413913326388895687
-MonoBehaviour:
+--- !u!135 &7720089912958663659
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4889947573020890350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2effbe3741fed1f489a755ae28692114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myKey: 0
-  myLetter: {fileID: 1273055320374820205}
-  Player: {fileID: 0}
-  isgrabable: 0
-  data: {fileID: 0}
-  WaitRock: 7
-  RockBad: {fileID: 4889947573020890350, guid: 72642b8bb995c754182cc908083b9a1c, type: 3}
-  Withinreach: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 1.21
+  m_Center: {x: 0, y: 0, z: 0.0000009536743}
 --- !u!136 &860164261121335320
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76,8 +76,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
-  m_Height: 0
+  m_Radius: 6
+  m_Height: 1.67
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8212916174254695195
@@ -107,27 +107,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!135 &4198217684695601236
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4889947573020890350}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 1.21
-  m_Center: {x: 0, y: 0, z: 0.0000009536743}
 --- !u!1 &6484435817863588862
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,8 +215,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4284111615
+  m_fontColor: {r: 1, g: 0.35283017, b: 0.35283017, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -12,20 +12,22 @@ public class CorrectLetter : MonoBehaviour
     private Transform RockH;
     public bool isgrabable;
     private GameObject playa;
-    private Collider rocksIn;
     public AttemptAtClimb data;
     public float WaitRock;
+    public GameObject RockBad;
+    private Vector3 Where;
+    public bool Withinreach; 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         playa = GameObject.FindGameObjectWithTag("Player");
         Player = playa.GetComponent<Transform>();
         RockH = gameObject.GetComponent<Transform>();
-        data = GameObject.FindAnyObjectByType<AttemptAtClimb>();
-        AssignTags();
-        
+       // data = GameObject.FindAnyObjectByType<AttemptAtClimb>();
+       
     }
     
 
@@ -51,6 +53,11 @@ public class CorrectLetter : MonoBehaviour
 
 
         }
+        if (Withinreach)
+        {
+          //  Detected();
+
+        }
 
     }
     IEnumerator Rockfall()
@@ -59,12 +66,13 @@ public class CorrectLetter : MonoBehaviour
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 
-    public void AssignTags()
+    public void AssignTags(KeyCode LetterToAssign)
     {
-        if (myKey == KeyCode.W)
+        if (myKey == LetterToAssign)
         {
-            gameObject.tag = "W";
+            gameObject.tag = LetterToAssign.ToString();
         }
+        /*
         if (myKey == KeyCode.R)
         {
             gameObject.tag = "R";
@@ -77,16 +85,20 @@ public class CorrectLetter : MonoBehaviour
         {
             gameObject.tag = "Q";
         }
+        */
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+        {
         isgrabable = true; 
+
+        }
        
         if (other.gameObject.CompareTag(this.gameObject.tag))
         {
-            Debug.Log($"is sees the same tag");
-
-            data.ReAssighn();
+            Withinreach = true;
+           Detected();
         }
 
     }
@@ -98,7 +110,23 @@ public class CorrectLetter : MonoBehaviour
     public void AssignLetter(KeyCode LetterToAssign)
     {
         myKey = LetterToAssign;
+        AssignTags(LetterToAssign);
         myLetter.text = myKey.ToString();
     }
-    
+    public void ChangeRock()
+    {
+        Vector3 thisRock = gameObject.transform.position;
+        Instantiate(RockBad, thisRock, Quaternion.identity);
+        Destroy(gameObject);
+
+    }
+    public void Detected()
+    {
+        data = GameObject.FindAnyObjectByType<AttemptAtClimb>();
+        Debug.Log($"is sees the same tag");
+
+        data.ReAssighn();
+        ChangeRock();
+        Withinreach = false;
+    }
 }

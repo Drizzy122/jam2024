@@ -8,6 +8,7 @@ TagManager:
   - Q
   - E
   - R
+  - Empty
   layers:
   - Default
   - TransparentFX

@@ -57,7 +57,7 @@ public class AttemptAtClimb : MonoBehaviour
     public void ReAssighn()
     {
 
-        for (int i = 0; i < ClimbingLetters.Length; i++, i++)
+        for (int i = 0; i < ClimbingLetters.Length;i++)
         {
             ClimbingLetters[i].AssignLetter(ClimbingOutputs[i]);
         }
