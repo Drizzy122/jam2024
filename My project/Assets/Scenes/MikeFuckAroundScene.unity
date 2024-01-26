@@ -250,6 +250,7 @@ MonoBehaviour:
   ClimbingOutputs: 
   NumberOfClimbingOutputs: 15
   ClimbingLetters: []
+  BadRocks: []
   rockPrefab: {fileID: 4889947573020890350, guid: f9269d713f4dad94fa672a9d75cf29d1, type: 3}
 --- !u!65 &597723185
 BoxCollider:

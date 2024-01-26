@@ -9,6 +9,7 @@ public class AttemptAtClimb : MonoBehaviour
     public List<KeyCode> ClimbingOutputs;
     public int NumberOfClimbingOutputs;
     public CorrectLetter[] ClimbingLetters;
+    public badRock[] BadRocks;
     public GameObject rockPrefab;
 
     // Start is called before the first frame update
@@ -18,7 +19,10 @@ public class AttemptAtClimb : MonoBehaviour
 
         Times(NumberOfClimbingOutputs);
         ClimbingLetters = GameObject.FindObjectsOfType<CorrectLetter>();
+        BadRocks = GameObject.FindObjectsOfType<badRock>();
         AssignLetters();
+        AssignLettersToBad();
+        
     }
 
    public void RandomiseClimbingPoints (int numberOfPoints)
@@ -32,11 +36,23 @@ public class AttemptAtClimb : MonoBehaviour
 
     public void AssignLetters()
     {
-        for(int i = 0;i < ClimbingLetters.Length;i++)
+       
+        for (int i = 0; i < ClimbingLetters.Length; i++)
         {
             ClimbingLetters[i].AssignLetter(ClimbingOutputs[i]);
+          //  BadRocks[i].AssignLetter(ClimbingInputs[i]);
+
         }
 
+    }
+    public void  AssignLettersToBad()
+    {
+        for (int i = 0; i < BadRocks.Length; i++)
+        {
+            
+            BadRocks[i].AssignLetter(ClimbingInputs[i]);
+
+        }
     }
     public void Times(int count)
     {

@@ -17,7 +17,7 @@ public class VelocityTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector3(0, 100, 0);
+            rb.velocity = new Vector3(0, 100 , 0);
         }
     }
 }

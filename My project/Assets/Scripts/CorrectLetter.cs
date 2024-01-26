@@ -16,7 +16,8 @@ public class CorrectLetter : MonoBehaviour
     public float WaitRock;
     public GameObject RockBad;
     private Vector3 Where;
-    public bool Withinreach; 
+    public bool Withinreach;
+    private badRock badRockScript;
 
 
     // Start is called before the first frame update
@@ -26,7 +27,8 @@ public class CorrectLetter : MonoBehaviour
         playa = GameObject.FindGameObjectWithTag("Player");
         Player = playa.GetComponent<Transform>();
         RockH = gameObject.GetComponent<Transform>();
-       // data = GameObject.FindAnyObjectByType<AttemptAtClimb>();
+        // data = GameObject.FindAnyObjectByType<AttemptAtClimb>();
+        badRockScript = RockBad.GetComponent<badRock>();
        
     }
     
@@ -117,7 +119,9 @@ public class CorrectLetter : MonoBehaviour
     {
         Vector3 thisRock = gameObject.transform.position;
         Instantiate(RockBad, thisRock, Quaternion.identity);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+      //  badRockScript.AssignLetter(myKey);
+        
 
     }
     public void Detected()
