@@ -10,6 +10,8 @@ public class CorrectLetter : MonoBehaviour
     public TextMeshPro myLetter;
     public Transform Player;
     private Transform RockH;
+    public Transform Target;
+    public GameObject target;
     public bool isgrabable;
     private GameObject playa;
     public AttemptAtClimb data;
@@ -29,6 +31,9 @@ public class CorrectLetter : MonoBehaviour
         RockH = gameObject.GetComponent<Transform>();
         // data = GameObject.FindAnyObjectByType<AttemptAtClimb>();
         badRockScript = RockBad.GetComponent<badRock>();
+      //  target = GameObject.FindGameObjectWithTag("Grab");
+       // Target = target.GetComponent<Transform>();
+
        
     }
     
@@ -52,7 +57,7 @@ public class CorrectLetter : MonoBehaviour
 
             Debug.Log(myKey.ToString());
             Player.position = RockH.position;
-
+          //  Target.position = RockH.position;
 
         }
         if (Withinreach)
