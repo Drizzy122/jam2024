@@ -518,7 +518,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -3.5713}
-  m_SizeDelta: {x: 100, y: 100.26}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593149771
 MonoBehaviour:
@@ -1088,6 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888011167}
   - component: {fileID: 888011166}
+  - component: {fileID: 888011168}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -1113,7 +1114,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -1146,6 +1147,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888011168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888011165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051535f99b31a9740ad8c5dc7b1dc198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoFileName: Bread.mp4
+  vid: {fileID: 593149769}
+  player: {fileID: 888011166}
 --- !u!1 &917622038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051535f99b31a9740ad8c5dc7b1dc198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoFileName: 
   vid: {fileID: 593149769}
   player: {fileID: 888011166}
 --- !u!1 &963194225
