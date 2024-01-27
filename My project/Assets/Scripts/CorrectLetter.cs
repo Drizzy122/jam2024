@@ -101,12 +101,13 @@ public class CorrectLetter : MonoBehaviour
         isgrabable = true; 
 
         }
-       
+       /*
         if (other.gameObject.CompareTag(this.gameObject.tag))
         {
             Withinreach = true;
            Detected();
         }
+       */
 
     }
     private void OnTriggerExit(Collider other)

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5144b8133c23f4e8d703a81c05f90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myKey: 0
+  myKey: 119
   myLetter: {fileID: 1273055320374820205}
   Player: {fileID: 0}
   isgrabable: 0

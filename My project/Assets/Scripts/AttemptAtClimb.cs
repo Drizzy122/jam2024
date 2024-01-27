@@ -21,7 +21,7 @@ public class AttemptAtClimb : MonoBehaviour
         ClimbingLetters = GameObject.FindObjectsOfType<CorrectLetter>();
         BadRocks = GameObject.FindObjectsOfType<badRock>();
         AssignLetters();
-        AssignLettersToBad();
+        //AssignLettersToBad();
         
     }
 

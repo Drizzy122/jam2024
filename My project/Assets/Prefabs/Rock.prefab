@@ -52,9 +52,11 @@ MonoBehaviour:
   myKey: 0
   myLetter: {fileID: 1273055320374820205}
   Player: {fileID: 0}
+  Target: {fileID: 0}
+  target: {fileID: 0}
   isgrabable: 0
   data: {fileID: 0}
-  WaitRock: 7
+  WaitRock: 4
   RockBad: {fileID: 4889947573020890350, guid: 72642b8bb995c754182cc908083b9a1c, type: 3}
   Withinreach: 0
 --- !u!136 &860164261121335320

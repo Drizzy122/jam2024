@@ -28,14 +28,13 @@ public class VelocityTest : MonoBehaviour
             directionOfGo.Normalize();
             rb.MovePosition(currentPos + (directionOfGo * speed * Time.deltaTime));
         }
+       
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = new Vector3(110, 0 , 110);
+        }
+       
 
 
     }
 }
-
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = new Vector3(0, 100 , 0);
-        }
-        */
